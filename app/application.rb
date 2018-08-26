@@ -5,7 +5,7 @@ def call (env)
   req = Rack::Request.new(env)
 
   if req.path.match(\items\)
-
+    resp.write "#{item.price}"
   else
     resp.write "Rout not found"
     respt.status = 404
