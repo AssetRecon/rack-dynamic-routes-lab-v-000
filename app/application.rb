@@ -6,7 +6,14 @@ def call (env)
 
   if req.path.match(/items/)
     item = req.path.split("/items/").last
-    resp.write "#{item.price}"
+    if item =@@items.find do |item|
+      item.name == item
+    end
+    resp.write item.price
+  else
+    resp.write "Rout not found"
+    resp.status = 404
+  end
   else
     resp.write "Rout not found"
     resp.status = 404
