@@ -9,11 +9,11 @@ def call (env)
     if item = @@items.find do |i| i.name == item_name end
     resp.write item.price
   else
-    resp.write "Rout not found"
+    resp.write "Route not found"
     resp.status = 400
   end
   else
-    resp.write "Rout not found"
+    resp.write "Route not found"
     resp.status = 404
   end
   resp.finish
