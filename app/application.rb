@@ -8,7 +8,7 @@ def call (env)
     resp.write "#{item.price}"
   else
     resp.write "Rout not found"
-    respt.status = 404
+    resp.status = 404
   end
 end
 
